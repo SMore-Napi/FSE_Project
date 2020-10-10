@@ -4,7 +4,7 @@
             "outputFile": "/Users/smore/Desktop/Innopolis/Fundamentals of Software Engineering/InnoRussian/InnoRussian/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-land/values-land.xml",
             "map": [
                 {
-                    "source": "/Users/smore/.gradle/caches/transforms-2/files-2.1/b17dc223d7884187c5580c1b3b9ce20c/material-1.0.0/res/values-land/values-land.xml",
+                    "source": "/Users/smore/.gradle/caches/transforms-2/files-2.1/ad0d556d4478897df290948cecd56847/material-1.0.0/res/values-land/values-land.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -23,7 +23,7 @@
                     }
                 },
                 {
-                    "source": "/Users/smore/.gradle/caches/transforms-2/files-2.1/4e039017508058e03141616af225b4eb/appcompat-1.2.0/res/values-land/values-land.xml",
+                    "source": "/Users/smore/.gradle/caches/transforms-2/files-2.1/4294b64d0372e37107d94a132048e96e/appcompat-1.2.0/res/values-land/values-land.xml",
                     "from": {
                         "startLines": "2,3,4",
                         "startColumns": "4,4,4",
