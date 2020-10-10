@@ -12,25 +12,11 @@
         android:layout_width="match_parent"
         android:layout_height="45dp"
         android:autofillHints="Search"
+        android:iconifiedByDefault="false"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/tvPhrasebook"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Phrasebook fragment"
-        android:textSize="30sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <ListView
-        android:id="@+id/phrases"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:queryHint="Search for phrase or word" />
 
 
 </LinearLayout>

@@ -1535,8 +1535,6 @@ id transition_scene_layoutid_cache
 id transition_transform
 id translation
 id triangle
-id tvAccount
-id tvPhrasebook
 id tvScanner
 id unchecked
 id uniform
