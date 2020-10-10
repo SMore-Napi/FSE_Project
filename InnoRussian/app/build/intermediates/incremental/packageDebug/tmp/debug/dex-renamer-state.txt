@@ -1,4 +1,4 @@
-#Sat Oct 10 18:56:07 SAMT 2020
+#Sat Oct 10 19:40:04 SAMT 2020
 base.0=/Users/smore/Desktop/Innopolis/Fundamentals of Software Engineering/InnoRussian/InnoRussian/app/build/intermediates/dex/debug/mergeExtDexDebug/classes.dex
 path.1=classes.dex
 renamed.1=classes2.dex

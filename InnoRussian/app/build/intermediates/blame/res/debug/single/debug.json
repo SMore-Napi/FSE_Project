@@ -96,6 +96,10 @@
         "source": "/Users/smore/Desktop/Innopolis/Fundamentals of Software Engineering/InnoRussian/InnoRussian/app/src/main/res/mipmap-hdpi/ic_launcher.png"
     },
     {
+        "merged": "/Users/smore/Desktop/Innopolis/Fundamentals of Software Engineering/InnoRussian/InnoRussian/app/build/intermediates/res/merged/debug/layout_activity_phrase.xml.flat",
+        "source": "/Users/smore/Desktop/Innopolis/Fundamentals of Software Engineering/InnoRussian/InnoRussian/app/src/main/res/layout/activity_phrase.xml"
+    },
+    {
         "merged": "/Users/smore/Desktop/Innopolis/Fundamentals of Software Engineering/InnoRussian/InnoRussian/app/build/intermediates/res/merged/debug/mipmap-xxhdpi_ic_launcher.png.flat",
         "source": "/Users/smore/Desktop/Innopolis/Fundamentals of Software Engineering/InnoRussian/InnoRussian/app/src/main/res/mipmap-xxhdpi/ic_launcher.png"
     },

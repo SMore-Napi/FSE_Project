@@ -1297,6 +1297,7 @@ id auto
 id autoComplete
 id autoCompleteToEnd
 id autoCompleteToStart
+id back_button
 id barrier
 id baseline
 id beginOnFirstDraw
@@ -1606,6 +1607,7 @@ layout abc_tooltip
 layout activity_daily_quiz
 layout activity_daily_quiz_result
 layout activity_main
+layout activity_phrase
 layout custom_dialog
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
