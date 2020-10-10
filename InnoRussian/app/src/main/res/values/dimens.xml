@@ -1,3 +1,7 @@
 <resources>
+<<<<<<< HEAD
     <dimen name="fab_margin">16dp</dimen>
+=======
+    <dimen name="text_margin">16dp</dimen>
+>>>>>>> origin/feature_bottom_nav_bar
 </resources>

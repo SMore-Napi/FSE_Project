@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/miPhrasebook"
+        android:title="Phrasebook"
+        android:icon="@drawable/ic_phrasebook"/>
+    <item
+        android:id="@+id/miLearn"
+        android:title="Learn"
+        android:icon="@drawable/ic_learn"/>
+    <item
+        android:id="@+id/miScanner"
+        android:title="Scanner"
+        android:icon="@drawable/ic_scanner"/>
+    <item
+        android:id="@+id/miAccount"
+        android:title="Account"
+        android:icon="@drawable/ic_account"/>
+
+
+</menu>
