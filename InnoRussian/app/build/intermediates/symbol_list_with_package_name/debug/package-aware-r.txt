@@ -1430,6 +1430,7 @@ id parent_matrix
 id path
 id pathRelative
 id percent
+id phrases
 id pin
 id position
 id postLayout
@@ -1534,7 +1535,6 @@ id transition_transform
 id translation
 id triangle
 id tvAccount
-id tvLearn
 id tvPhrasebook
 id tvScanner
 id unchecked
@@ -1606,7 +1606,6 @@ layout abc_tooltip
 layout activity_daily_quiz
 layout activity_daily_quiz_result
 layout activity_main
-layout activity_tests
 layout custom_dialog
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog

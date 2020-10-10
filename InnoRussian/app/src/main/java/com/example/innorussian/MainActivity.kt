@@ -17,7 +17,7 @@ class MainActivity : AppCompatActivity() {
         setCurrentFragment(phrasebookFragment)
 
         bottomNavigationView.setOnNavigationItemSelectedListener {
-            when(it.itemId) {
+            when (it.itemId) {
                 R.id.miPhrasebook -> setCurrentFragment(phrasebookFragment)
                 R.id.miLearn -> setCurrentFragment(learnFragment)
                 R.id.miScanner -> setCurrentFragment(scannerFragment)

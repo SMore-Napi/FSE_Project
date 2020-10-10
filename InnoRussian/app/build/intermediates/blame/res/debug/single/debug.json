@@ -64,10 +64,6 @@
         "source": "/Users/smore/Desktop/Innopolis/Fundamentals of Software Engineering/InnoRussian/InnoRussian/app/src/main/res/layout/activity_main.xml"
     },
     {
-        "merged": "/Users/smore/Desktop/Innopolis/Fundamentals of Software Engineering/InnoRussian/InnoRussian/app/build/intermediates/res/merged/debug/layout_activity_tests.xml.flat",
-        "source": "/Users/smore/Desktop/Innopolis/Fundamentals of Software Engineering/InnoRussian/InnoRussian/app/src/main/res/layout/activity_tests.xml"
-    },
-    {
         "merged": "/Users/smore/Desktop/Innopolis/Fundamentals of Software Engineering/InnoRussian/InnoRussian/app/build/intermediates/res/merged/debug/drawable-xhdpi_ic_scanner.png.flat",
         "source": "/Users/smore/Desktop/Innopolis/Fundamentals of Software Engineering/InnoRussian/InnoRussian/app/src/main/res/drawable-xhdpi/ic_scanner.png"
     },
