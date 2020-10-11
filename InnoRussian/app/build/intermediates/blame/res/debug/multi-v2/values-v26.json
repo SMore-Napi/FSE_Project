@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\Makshe\\Downloads\\InnoRussian-develop\\InnoRussian\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v26\\values-v26.xml",
+            "outputFile": "/Users/smore/Desktop/Innopolis/Fundamentals of Software Engineering/InnoRussian/InnoRussian/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v26/values-v26.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Makshe\\.gradle\\caches\\transforms-2\\files-2.1\\4294b64d0372e37107d94a132048e96e\\appcompat-1.2.0\\res\\values-v26\\values-v26.xml",
+                    "source": "/Users/smore/.gradle/caches/transforms-2/files-2.1/4294b64d0372e37107d94a132048e96e/appcompat-1.2.0/res/values-v26/values-v26.xml",
                     "from": {
                         "startLines": "2,3,4,8,12,16",
                         "startColumns": "4,4,4,4,4,4",
