@@ -8,6 +8,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".MainActivity">
+
     <SearchView
         android:id="@+id/svSearchView"
         android:layout_width="match_parent"
@@ -108,17 +109,16 @@
                        android:orientation="horizontal"
                        app:layout_constraintBottom_toBottomOf="@id/ibShop"
                        app:layout_constraintEnd_toEndOf="parent"
-                       app:layout_constraintStart_toStartOf="parent"
-                       android:background="@drawable/dorms_top">
+                       app:layout_constraintStart_toStartOf="parent">
 
                        <TextView
-                           android:id="@+id/tvPhrase1"
+                           android:id="@+id/tvSTopic1"
                            android:layout_width="match_parent"
                            android:layout_height="wrap_content"
                            android:layout_marginTop="200dp"
 
                            android:background="@color/colorTransparentBackground"
-                           android:text=" Phrase 1"
+                           android:text=" Topic 1"
                            android:textColor="@color/colorWhite"
                            android:textSize="20sp" />
                    </LinearLayout>
@@ -129,11 +129,11 @@
                        android:orientation="horizontal">
 
                        <TextView
-                           android:id="@+id/tvPhrase2"
+                           android:id="@+id/tvSTopic2"
                            android:layout_width="match_parent"
                            android:layout_height="match_parent"
                            android:background="@color/colorTransparentBackground"
-                           android:text=" Phrase 2"
+                           android:text=" Topic 2"
                            android:textColor="@color/colorWhite"
                            android:textSize="20sp" />
                    </LinearLayout>
@@ -145,11 +145,11 @@
                        android:orientation="horizontal">
 
                        <TextView
-                           android:id="@+id/tvPhrase3"
+                           android:id="@+id/tvSTopic3"
                            android:layout_width="match_parent"
                            android:layout_height="match_parent"
                            android:background="@color/colorTransparentBackground"
-                           android:text=" Phrase 3"
+                           android:text=" Topic 3"
                            android:textColor="@color/colorWhite"
                            android:textSize="20sp" />
                    </LinearLayout>
@@ -240,13 +240,13 @@
                        app:layout_constraintStart_toStartOf="parent">
 
                        <TextView
-                           android:id="@+id/tvSCPhrase1"
+                           android:id="@+id/tvSCTopic1"
                            android:layout_width="match_parent"
                            android:layout_height="wrap_content"
                            android:layout_marginTop="200dp"
 
                            android:background="@color/colorTransparentBackground"
-                           android:text=" Phrase 1"
+                           android:text=" Topic 1"
                            android:textColor="@color/colorWhite"
                            android:textSize="20sp" />
                    </LinearLayout>
@@ -257,11 +257,11 @@
                        android:orientation="horizontal">
 
                        <TextView
-                           android:id="@+id/tvSCPhrase2"
+                           android:id="@+id/tvSCTopic2"
                            android:layout_width="match_parent"
                            android:layout_height="match_parent"
                            android:background="@color/colorTransparentBackground"
-                           android:text=" Phrase 2"
+                           android:text=" Topic 2"
                            android:textColor="@color/colorWhite"
                            android:textSize="20sp" />
                    </LinearLayout>
@@ -273,11 +273,11 @@
                        android:orientation="horizontal">
 
                        <TextView
-                           android:id="@+id/tvSCPhrase3"
+                           android:id="@+id/tvSCTopic3"
                            android:layout_width="match_parent"
                            android:layout_height="match_parent"
                            android:background="@color/colorTransparentBackground"
-                           android:text=" Phrase 3"
+                           android:text=" Topic 3"
                            android:textColor="@color/colorWhite"
                            android:textSize="20sp" />
                    </LinearLayout>
@@ -368,13 +368,13 @@
                        app:layout_constraintStart_toStartOf="parent">
 
                        <TextView
-                           android:id="@+id/tvDPhrase1"
+                           android:id="@+id/tvDTopic1"
                            android:layout_width="match_parent"
                            android:layout_height="wrap_content"
                            android:layout_marginTop="200dp"
 
                            android:background="@color/colorTransparentBackground"
-                           android:text=" Phrase 1"
+                           android:text=" Room"
                            android:textColor="@color/colorWhite"
                            android:textSize="20sp" />
                    </LinearLayout>
@@ -385,11 +385,11 @@
                        android:orientation="horizontal">
 
                        <TextView
-                           android:id="@+id/tvDPhrase2"
+                           android:id="@+id/tvDPTopic2"
                            android:layout_width="match_parent"
                            android:layout_height="match_parent"
                            android:background="@color/colorTransparentBackground"
-                           android:text=" Phrase 2"
+                           android:text=" Topic 2"
                            android:textColor="@color/colorWhite"
                            android:textSize="20sp" />
                    </LinearLayout>
@@ -401,11 +401,11 @@
                        android:orientation="horizontal">
 
                        <TextView
-                           android:id="@+id/tvDPhrase3"
+                           android:id="@+id/tvDTopic3"
                            android:layout_width="match_parent"
                            android:layout_height="match_parent"
                            android:background="@color/colorTransparentBackground"
-                           android:text=" Phrase 3"
+                           android:text=" Topic 3"
                            android:textColor="@color/colorWhite"
                            android:textSize="20sp" />
                    </LinearLayout>
@@ -500,7 +500,7 @@
                            android:layout_marginTop="200dp"
 
                            android:background="@color/colorTransparentBackground"
-                           android:text=" Phrase 1"
+                           android:text=" Education"
                            android:textColor="@color/colorWhite"
                            android:textSize="20sp" />
                    </LinearLayout>
@@ -515,7 +515,7 @@
                            android:layout_width="match_parent"
                            android:layout_height="match_parent"
                            android:background="@color/colorTransparentBackground"
-                           android:text=" Phrase 2"
+                           android:text=" School Supplies"
                            android:textColor="@color/colorWhite"
                            android:textSize="20sp" />
                    </LinearLayout>
@@ -531,7 +531,7 @@
                            android:layout_width="match_parent"
                            android:layout_height="match_parent"
                            android:background="@color/colorTransparentBackground"
-                           android:text=" Phrase 3"
+                           android:text=" The Building Inside"
                            android:textColor="@color/colorWhite"
                            android:textSize="20sp" />
                    </LinearLayout>
