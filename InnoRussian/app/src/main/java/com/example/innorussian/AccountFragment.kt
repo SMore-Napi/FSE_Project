@@ -52,13 +52,30 @@ class AccountFragment : Fragment(R.layout.fragment_account){
 
     private fun getPhrasesArray(): ArrayList<Phrases> {
 
-        val w1 = Phrases("Привет", "Hello", "auditoriya")
-        val w2 = Phrases("Как дела?", "How are you?", "stolovaya")
-        val w3 = Phrases("Как погода?", "How is the weather?", "zanyatiye")
-        val w4 = Phrases("АЗАЗА", "AZAZA", "AZAZA")
+        val w1 = Phrases("аудидория", "auditorium", "auditoriya")
+        val w2 = Phrases("аудитория", "audience", "auditoriya")
+        val w3 = Phrases("столовая", "canteen", "stolovaya")
+        val w4 = Phrases("занятие", "class", "zanyatiye")
+        val w5 = Phrases("лекция", "lecture", "lektsiya")
+        val w6 = Phrases("лектор", "lecturer", "lektor")
+        val w7 = Phrases("профессор", "professor", "professor")
+        val w8 = Phrases("учитель", "teacher", "uchitel")
+        val w9 = Phrases("ассистент", "assistant", "assistent")
+        val w10 = Phrases("курс", "course", "kurs")
+        val w11 = Phrases("декан", "dean","dekan")
+        val w12 = Phrases("отделение", "department", "otdeleniye")
+        val w13 = Phrases("диплом", "diploma", "diplom")
+        val w14 = Phrases("экзамен","exam", "ekzamen")
+        val w15 = Phrases("финальные экзамены","finals", "finalnye ekzameny")
+        val w16 = Phrases("группа", "group", "gruppa")
+        val w17 = Phrases("общежитие", "dormitory", "obshchezhitiye")
+        val w18 = Phrases("кампус", "campus","kampus")
+        val w19 = Phrases("студент", "student","student")
+        val w20 = Phrases("семестр", "semester", "semestr")
+        val w21 = Phrases("тест", "test","test")
+        val w22 = Phrases("пересдача", "retake", "peresdacha")
 
-
-        return arrayListOf(w1, w2, w3, w4)
+        return arrayListOf(w1, w2, w3, w4, w5, w6, w7, w8, w9, w10, w11, w12, w13, w14, w15, w16, w17, w18, w19, w20, w21, w22)
     }
 
     private fun getPhrasesPreviewArray(): ArrayList<String> {
