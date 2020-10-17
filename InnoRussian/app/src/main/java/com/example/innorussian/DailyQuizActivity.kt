@@ -26,6 +26,8 @@ class DailyQuizActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_daily_quiz)
 
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+
         initialization()
     }
 
