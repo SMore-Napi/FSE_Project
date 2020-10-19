@@ -1,0 +1,544 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <SearchView
+        android:id="@+id/svSearchView"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:autofillHints="Search"
+        android:iconifiedByDefault="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!--Base CardView-->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvShop"
+                style="@style/Base.CardView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                app:cardCornerRadius="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.473"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/svSearchView"
+                app:layout_constraintVertical_bias="0.021">
+
+                <!--This is a ConstraintLayout for the entire CardView
+                           including the expandable portion-->
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cvShop_fixed_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="@+id/cvShop"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.511"
+                    tools:layout_editor_absoluteX="-55dp">
+
+                    <ImageButton
+                        android:id="@+id/ibShop"
+                        android:layout_width="430dp"
+                        android:layout_height="200dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/pyatyorochka"
+                        app:layout_constraintBottom_toBottomOf="@+id/cvShop_fixed_layout"
+                        app:layout_constraintEnd_toEndOf="@+id/cvShop_fixed_layout"
+                        app:layout_constraintStart_toStartOf="@+id/cvShop_fixed_layout"
+                        app:layout_constraintTop_toTopOf="@+id/cvShop_fixed_layout"
+                        app:layout_constraintVertical_bias="1.0" />
+
+                    <TextView
+                        android:id="@+id/tvShop"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:background="@color/colorTransparentBackground"
+                        android:text=" Shop"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+
+                        app:layout_constraintBottom_toBottomOf="@id/ibShop"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintVertical_bias="0.198" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <!--The following is the expandable portion whose
+                        visibility is initially set to 'gone'.
+                        The parent LinearLayout contains 3 child LinearLayouts
+                        that hold a subject name and an icon each.-->
+                <LinearLayout
+                    android:id="@+id/cvShop_hidden_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <!--Child LinearLayout 1-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        app:layout_constraintBottom_toBottomOf="@id/ibShop"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent">
+
+                        <TextView
+                            android:id="@+id/tvSTopic1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="200dp"
+
+                            android:background="@color/colorTransparentBackground"
+                            android:text=" Topic 1"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="20sp" />
+                    </LinearLayout>
+                    <!--Child LinearLayout 2-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tvSTopic2"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/colorTransparentBackground"
+                            android:text=" Topic 2"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="20sp" />
+                    </LinearLayout>
+
+                    <!--Child LinearLayout 3-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tvSTopic3"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/colorTransparentBackground"
+                            android:text=" Topic 3"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="20sp" />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvSportsComplex"
+                style="@style/Base.CardView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                app:cardCornerRadius="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.473"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/svSearchView"
+                app:layout_constraintVertical_bias="0.021">
+
+                <!--This is a ConstraintLayout for the entire CardView
+                           including the expandable portion-->
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cvSportsComplex_fixed_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="@+id/cvShop"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.511"
+                    tools:layout_editor_absoluteX="-55dp">
+
+                    <ImageButton
+                        android:id="@+id/ibSportComplex"
+                        android:layout_width="430dp"
+                        android:layout_height="200dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/sports_complex"
+                        app:layout_constraintBottom_toBottomOf="@+id/cvSportsComplex_fixed_layout"
+                        app:layout_constraintEnd_toEndOf="@+id/cvSportsComplex_fixed_layout"
+                        app:layout_constraintStart_toStartOf="@+id/cvSportsComplex_fixed_layout"
+                        app:layout_constraintTop_toTopOf="@+id/cvSportsComplex_fixed_layout"
+                        app:layout_constraintVertical_bias="1.0" />
+
+                    <TextView
+                        android:id="@+id/tvSpotComplex"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:background="@color/colorTransparentBackground"
+                        android:text=" Sports Complex"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+
+                        app:layout_constraintBottom_toBottomOf="@id/ibSportComplex"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintVertical_bias="0.198" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <!--The following is the expandable portion whose
+                        visibility is initially set to 'gone'.
+                        The parent LinearLayout contains 3 child LinearLayouts
+                        that hold a subject name and an icon each.-->
+                <LinearLayout
+                    android:id="@+id/cvSportsComplex_hidden_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <!--Child LinearLayout 1-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        app:layout_constraintBottom_toBottomOf="@id/ibSportComplex"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent">
+
+                        <TextView
+                            android:id="@+id/tvSCTopic1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="200dp"
+
+                            android:background="@color/colorTransparentBackground"
+                            android:text=" Topic 1"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="20sp" />
+                    </LinearLayout>
+                    <!--Child LinearLayout 2-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tvSCTopic2"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/colorTransparentBackground"
+                            android:text=" Topic 2"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="20sp" />
+                    </LinearLayout>
+
+                    <!--Child LinearLayout 3-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tvSCTopic3"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/colorTransparentBackground"
+                            android:text=" Topic 3"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="20sp" />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvDorms"
+                style="@style/Base.CardView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                app:cardCornerRadius="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.473"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/svSearchView"
+                app:layout_constraintVertical_bias="0.021">
+
+                <!--This is a ConstraintLayout for the entire CardView
+                           including the expandable portion-->
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cvDorms_fixed_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="@+id/cvShop"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.511"
+                    tools:layout_editor_absoluteX="-55dp">
+
+                    <ImageButton
+                        android:id="@+id/ibDorms"
+                        android:layout_width="430dp"
+                        android:layout_height="200dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/dorms"
+                        app:layout_constraintBottom_toBottomOf="@+id/cvDorms_fixed_layout"
+                        app:layout_constraintEnd_toEndOf="@+id/cvDorms_fixed_layout"
+                        app:layout_constraintStart_toStartOf="@+id/cvDorms_fixed_layout"
+                        app:layout_constraintTop_toTopOf="@+id/cvDorms_fixed_layout"
+                        app:layout_constraintVertical_bias="1.0" />
+
+                    <TextView
+                        android:id="@+id/tvDorms"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:background="@color/colorTransparentBackground"
+                        android:text=" Dorms"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+
+                        app:layout_constraintBottom_toBottomOf="@id/ibDorms"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintVertical_bias="0.198" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <!--The following is the expandable portion whose
+                        visibility is initially set to 'gone'.
+                        The parent LinearLayout contains 3 child LinearLayouts
+                        that hold a subject name and an icon each.-->
+                <LinearLayout
+                    android:id="@+id/cvDorms_hidden_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <!--Child LinearLayout 1-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        app:layout_constraintBottom_toBottomOf="@id/ibShop"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent">
+
+                        <TextView
+                            android:id="@+id/tvDTopic1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="200dp"
+
+                            android:background="@color/colorTransparentBackground"
+                            android:text=" Room"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="20sp" />
+                    </LinearLayout>
+                    <!--Child LinearLayout 2-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tvDPTopic2"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/colorTransparentBackground"
+                            android:text=" Topic 2"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="20sp" />
+                    </LinearLayout>
+
+                    <!--Child LinearLayout 3-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tvDTopic3"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/colorTransparentBackground"
+                            android:text=" Topic 3"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="20sp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvUniversity"
+                style="@style/Base.CardView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                app:cardCornerRadius="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.473"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/svSearchView"
+                app:layout_constraintVertical_bias="0.021">
+
+                <!--This is a ConstraintLayout for the entire CardView
+                           including the expandable portion-->
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cvUniversity_fixed_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="@+id/cvShop"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.511"
+                    tools:layout_editor_absoluteX="-55dp">
+
+                    <ImageButton
+                        android:id="@+id/ibUniversity"
+                        android:layout_width="430dp"
+                        android:layout_height="200dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/iu"
+                        app:layout_constraintBottom_toBottomOf="@+id/cvUniversity_fixed_layout"
+                        app:layout_constraintEnd_toEndOf="@+id/cvUniversity_fixed_layout"
+                        app:layout_constraintStart_toStartOf="@+id/cvUniversity_fixed_layout"
+                        app:layout_constraintTop_toTopOf="@+id/cvUniversity_fixed_layout"
+                        app:layout_constraintVertical_bias="1.0" />
+
+                    <TextView
+                        android:id="@+id/tvUniversity"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:background="@color/colorTransparentBackground"
+                        android:text=" University"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+
+                        app:layout_constraintBottom_toBottomOf="@id/ibUniversity"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintVertical_bias="0.198" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <!--The following is the expandable portion whose
+                        visibility is initially set to 'gone'.
+                        The parent LinearLayout contains 3 child LinearLayouts
+                        that hold a subject name and an icon each.-->
+                <LinearLayout
+                    android:id="@+id/cvUniversity_hidden_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <!--Child LinearLayout 1-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        app:layout_constraintBottom_toBottomOf="@id/ibShop"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent">
+
+                        <TextView
+                            android:id="@+id/tvUPhrase1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="200dp"
+
+                            android:background="@color/colorTransparentBackground"
+                            android:text=" Education"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="20sp" />
+                    </LinearLayout>
+                    <!--Child LinearLayout 2-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tvUPhrase2"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/colorTransparentBackground"
+                            android:text=" School Supplies"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="20sp" />
+                    </LinearLayout>
+
+                    <!--Child LinearLayout 3-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tvUPhrase3"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/colorTransparentBackground"
+                            android:text=" The Building Inside"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="20sp" />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>
+
