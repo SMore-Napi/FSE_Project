@@ -15,6 +15,7 @@ class PhrasesActivity() : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.phrases_main)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
         val topicName: String? = intent.getStringExtra("topic")
 
         var list : List<PhrasesParentModel> = TopicsDataFactory.education.phrases
