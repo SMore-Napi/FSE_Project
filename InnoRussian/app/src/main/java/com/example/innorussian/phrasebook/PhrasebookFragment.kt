@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 package com.example.innorussian.phrasebook
 
 import android.content.Context
@@ -19,53 +18,20 @@ class PhrasebookFragment : Fragment(R.layout.phrasebook_main){
 
     lateinit var recyclerView : RecyclerView
 >>>>>>> develop_phrasebook:InnoRussian/app/src/main/java/com/example/innorussian/phrasebook/PhrasebookFragment.kt
-=======
-package com.example.innorussian
-
-import android.os.Bundle
-import android.view.View
-import androidx.fragment.app.Fragment
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
-import com.example.innorussian.phrasebook.ParentDataFactory
-import com.example.innorussian.phrasebook.PhrasebookParentAdapter
-import kotlinx.android.synthetic.main.fragment_home.*
-import kotlinx.android.synthetic.main.phrasebook_main.*
-import kotlinx.android.synthetic.main.phrasebook_main.svSearchView
-
-class HomeFragment : Fragment(R.layout.phrasebook_main) {
-    lateinit var recyclerView: RecyclerView
->>>>>>> develop_phrasebook
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-<<<<<<< HEAD
-=======
-        svSearchView.queryHint = "Search for topic"
-
->>>>>>> develop_phrasebook
         initRecycler()
     }
 
 
-<<<<<<< HEAD
     private fun initRecycler(){
         recyclerView = phrasebook_rv!!
 
         recyclerView.apply {
             layoutManager = LinearLayoutManager(context,
                 RecyclerView.VERTICAL, false)
-=======
-    private fun initRecycler() {
-        recyclerView = phrasebook_rv!!
-
-        recyclerView.apply {
-            layoutManager = LinearLayoutManager(
-                context,
-                RecyclerView.VERTICAL, false
-            )
->>>>>>> develop_phrasebook
             adapter = PhrasebookParentAdapter(
                 ParentDataFactory.getParents(40)
             )
@@ -73,7 +39,6 @@ class HomeFragment : Fragment(R.layout.phrasebook_main) {
         }
 
     }
-<<<<<<< HEAD
 
     /*override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -120,6 +85,4 @@ class HomeFragment : Fragment(R.layout.phrasebook_main) {
             }
         }
     }*/
-=======
->>>>>>> develop_phrasebook
 }
