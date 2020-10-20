@@ -18,16 +18,15 @@ import kotlinx.android.synthetic.main.phrases_parent.*
 import kotlinx.android.synthetic.main.phrases_parent.view.*
 import java.util.*
 
-class PhrasesActivity() : AppCompatActivity(), TextToSpeech.OnInitListener {
+class PhrasesActivity() : AppCompatActivity(){
     lateinit var recyclerView : RecyclerView
-    private var mTTs: TextToSpeech? = null //variable for text to speech
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.phrases_main)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         val topicName: String? = intent.getStringExtra("topic")
 
-        mTTs = TextToSpeech(this, this)
 
         var list : List<PhrasesParentModel> = TopicsDataFactory.education.phrases
 
@@ -37,12 +36,8 @@ class PhrasesActivity() : AppCompatActivity(), TextToSpeech.OnInitListener {
             }
         }
 
-
-
         initRecycler(list)
     }
-
-
 
     private fun initRecycler(list : List<PhrasesParentModel>){
         recyclerView = phrases_rv!!
@@ -57,7 +52,7 @@ class PhrasesActivity() : AppCompatActivity(), TextToSpeech.OnInitListener {
 
 
 
-    override fun onInit(status: Int) {
+    /*override fun onInit(status: Int) {
         if (status == TextToSpeech.SUCCESS){
             val result = mTTs!!.isLanguageAvailable(Locale("ru"))
             Log.d("TTS", "ok");
@@ -68,6 +63,5 @@ class PhrasesActivity() : AppCompatActivity(), TextToSpeech.OnInitListener {
 
     private fun speakOut(text: String){
         mTTs!!.speak(text, TextToSpeech.QUEUE_FLUSH, null, "")
-
-    }
+    }*/
 }
