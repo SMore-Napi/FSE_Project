@@ -27,7 +27,6 @@ class PhrasesActivity() : AppCompatActivity(){
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         val topicName: String? = intent.getStringExtra("topic")
 
-
         var list : List<PhrasesParentModel> = TopicsDataFactory.education.phrases
 
         for (topic in TopicsDataFactory.getTopics()){

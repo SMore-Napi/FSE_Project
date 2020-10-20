@@ -1,4 +1,5 @@
 package com.example.innorussian.phrases
+import android.media.Image
 import android.os.Build
 import android.speech.tts.TextToSpeech
 import android.util.Log
@@ -39,11 +40,28 @@ class PhrasesParentAdapter(private val parents: List<PhrasesParentModel>) :
         holder.russianView.text = parent.russian
         holder.transcView.text = parent.transc
 
-
         mTTs = TextToSpeech(holder.itemView.context, this)
+
+        if (!parent.isFavorite) {
+            holder.favoriteButton.setImageResource(R.drawable.favorite)
+        } else {
+            holder.favoriteButton.setImageResource(R.drawable.favorite_on)
+        }
 
         holder.listenButton.setOnClickListener{
             speakOut(parent.transc)
+        }
+
+        holder.favoriteButton.setOnClickListener {
+            if (!parent.isFavorite) {
+                parent.isFavorite = true
+                holder.favoriteButton.setImageResource(R.drawable.favorite_on)
+                TopicsDataFactory.addToFavorites(parent)
+            } else {
+                parent.isFavorite = false
+                holder.favoriteButton.setImageResource(R.drawable.favorite)
+                TopicsDataFactory.excludeFromFavorites(parent)
+            }
         }
 
         val childLayoutManager = LinearLayoutManager(holder.recyclerView.context, RecyclerView.VERTICAL, false)
@@ -52,6 +70,7 @@ class PhrasesParentAdapter(private val parents: List<PhrasesParentModel>) :
             layoutManager = childLayoutManager
             adapter = PhrasesChildAdapter(parent.children)
             setRecycledViewPool(viewPool)
+
         }
 
         val isExpandable : Boolean = parents[position].isExpandable()
@@ -73,6 +92,7 @@ class PhrasesParentAdapter(private val parents: List<PhrasesParentModel>) :
         var russianView : TextView = itemView.findViewById(R.id.phrases_russian)
         var transcView : TextView = itemView.findViewById(R.id.phrases_transcription)
         var listenButton : ImageButton = itemView.findViewById(R.id.ib_listen)
+        var favoriteButton : ImageButton = itemView.findViewById(R.id.ib_favourite)
 
         var linearLayout: LinearLayout = itemView.findViewById(R.id.phrases_linear_layout)
         var expandableLayout : RelativeLayout = itemView.findViewById(R.id.phrases_expandable_layout)
@@ -93,3 +113,4 @@ class PhrasesParentAdapter(private val parents: List<PhrasesParentModel>) :
 
     }
 }
+

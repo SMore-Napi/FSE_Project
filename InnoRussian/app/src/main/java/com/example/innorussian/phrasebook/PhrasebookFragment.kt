@@ -27,7 +27,7 @@ class PhrasebookFragment : Fragment(R.layout.phrasebook_main){
             layoutManager = LinearLayoutManager(context,
                 RecyclerView.VERTICAL, false)
             adapter = PhrasebookParentAdapter(
-                ParentDataFactory.getParents(40)
+                PhrasebookParentDataFactory.getParents(40)
             )
             setHasFixedSize(true)
         }

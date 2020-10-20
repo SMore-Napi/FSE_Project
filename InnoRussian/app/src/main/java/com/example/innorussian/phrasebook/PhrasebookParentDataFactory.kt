@@ -12,27 +12,27 @@ import com.example.innorussian.phrasebook.PhrasebookChildDataFactory.topic1
 import com.example.innorussian.phrasebook.PhrasebookChildDataFactory.topic2
 import com.example.innorussian.R
 
-object ParentDataFactory{
-    private val parent1 : ParentModel =
-        ParentModel(
+object PhrasebookParentDataFactory{
+    private val parent1 : PhrasebookParentModel =
+        PhrasebookParentModel(
             R.drawable.iu,
             "University",
             listOf(education, schoolSupplies, theBuildingInside)
         )
-    private val parent2 : ParentModel =
-        ParentModel(
+    private val parent2 : PhrasebookParentModel =
+        PhrasebookParentModel(
             R.drawable.dorms,
             "Dormitories",
             listOf(room, kitchen, bedroom, bathroom, hallway)
         )
-    private val parent3 : ParentModel =
-        ParentModel(
+    private val parent3 : PhrasebookParentModel =
+        PhrasebookParentModel(
             R.drawable.pyatyorochka,
             "Supermarket",
             listOf(topic1)
         )
-    private val parent4 : ParentModel =
-        ParentModel(
+    private val parent4 : PhrasebookParentModel =
+        PhrasebookParentModel(
             R.drawable.sports_complex,
             "SportComplex",
             listOf(topic1, topic2)
@@ -45,7 +45,7 @@ object ParentDataFactory{
         parent4
     )
 
-    fun getParents(m : Int) : List<ParentModel>{
+    fun getParents(m : Int) : List<PhrasebookParentModel>{
         return parents
     }
 }

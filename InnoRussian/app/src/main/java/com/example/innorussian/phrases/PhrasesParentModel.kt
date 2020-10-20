@@ -5,7 +5,8 @@ class PhrasesParentModel (
     val russian : String,
     val transc: String,
     val children : List<PhrasesChildModel>,
-    var expandable : Boolean = false
+    var expandable : Boolean = false,
+    var isFavorite : Boolean = false
 ){
     fun isExpandable() : Boolean{
         return expandable

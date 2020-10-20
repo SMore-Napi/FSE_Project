@@ -1,6 +1,6 @@
 package com.example.innorussian.phrasebook
 
-class ParentModel (
+class PhrasebookParentModel (
     val drawableID : Int,
     val nameOfSection : String,
     val children : List<PhrasebookChildModel>,
