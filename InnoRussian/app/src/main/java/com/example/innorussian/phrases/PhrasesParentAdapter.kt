@@ -43,7 +43,7 @@ class PhrasesParentAdapter(private val parents: List<PhrasesParentModel>) :
         mTTs = TextToSpeech(holder.itemView.context, this)
 
         holder.listenButton.setOnClickListener{
-            speakOut(parent.russian)
+            speakOut(parent.transc)
         }
 
         val childLayoutManager = LinearLayoutManager(holder.recyclerView.context, RecyclerView.VERTICAL, false)
@@ -80,7 +80,7 @@ class PhrasesParentAdapter(private val parents: List<PhrasesParentModel>) :
 
     override fun onInit(status: Int) {
         if (status == TextToSpeech.SUCCESS){
-            val result = mTTs!!.isLanguageAvailable(Locale("ru"))
+            val result = mTTs!!.isLanguageAvailable(Locale.US)
             Log.d("TTS", "ok");
         } else {
             Log.d("TTS", "error");
@@ -88,6 +88,8 @@ class PhrasesParentAdapter(private val parents: List<PhrasesParentModel>) :
     }
 
     private fun speakOut(text: String){
+        mTTs?.setSpeechRate(0.5f)
         mTTs!!.speak(text, TextToSpeech.QUEUE_FLUSH, null, "")
+
     }
 }
