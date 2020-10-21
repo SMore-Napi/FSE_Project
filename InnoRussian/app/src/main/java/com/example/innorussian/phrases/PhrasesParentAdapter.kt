@@ -100,7 +100,7 @@ class PhrasesParentAdapter(private val parents: List<PhrasesParentModel>) :
 
     override fun onInit(status: Int) {
         if (status == TextToSpeech.SUCCESS){
-            val result = mTTs!!.setLanguage(Locale.US)
+            val result = mTTs!!.isLanguageAvailable(Locale.US)
             Log.d("TTS", "ok");
         } else {
             Log.d("TTS", "error");
