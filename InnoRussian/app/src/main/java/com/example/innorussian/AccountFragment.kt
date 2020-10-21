@@ -20,7 +20,6 @@ class AccountFragment : Fragment(R.layout.fragment_account) {
 
         button_favourites.setOnClickListener {
             val favouritesIntent = Intent(activity, PhrasesActivity()::class.java)
-            favouritesIntent.putExtra("topic", "Favorites")
             startActivity(favouritesIntent)
         }
     }

@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.innorussian.R
 
-class PhrasebookParentAdapter(private val parents: List<PhrasebookParentModel>) :
+class PhrasebookParentAdapter(private val parents: List<ParentModel>) :
     RecyclerView.Adapter<PhrasebookParentAdapter.ViewHolder>(){
 
     private val viewPool = RecyclerView.RecycledViewPool()

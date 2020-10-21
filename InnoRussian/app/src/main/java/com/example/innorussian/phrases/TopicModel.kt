@@ -2,5 +2,5 @@ package com.example.innorussian.phrases
 
 class TopicModel(
     val nameOfTopic : String,
-    var phrases : ArrayList<PhrasesParentModel>
+    var phrases : List<PhrasesParentModel>
 )
