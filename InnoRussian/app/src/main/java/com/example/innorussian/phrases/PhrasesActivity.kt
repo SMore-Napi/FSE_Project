@@ -27,7 +27,6 @@ class PhrasesActivity() : AppCompatActivity(){
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         val topicName: String? = intent.getStringExtra("topic")
 
-
         var list : List<PhrasesParentModel> = TopicsDataFactory.education.phrases
 
         for (topic in TopicsDataFactory.getTopics()){
@@ -37,6 +36,13 @@ class PhrasesActivity() : AppCompatActivity(){
         }
 
         initRecycler(list)
+    }
+
+    override fun onPause(){
+        super.onPause()
+        for (phrase in PhrasesParentDataFactory.getParents()){
+            phrase.expandable = false
+        }
     }
 
     private fun initRecycler(list : List<PhrasesParentModel>){

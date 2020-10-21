@@ -63,7 +63,23 @@ class PhrasesParentAdapter(private val parents: List<PhrasesParentModel>) :
             notifyItemChanged(position)
         }
 
+        if (!parent.isFavorite){
+            holder.favoriteButton.setImageResource(R.drawable.favorite)
+        } else {
+            holder.favoriteButton.setImageResource(R.drawable.favorite_on)
+        }
 
+        holder.favoriteButton.setOnClickListener {
+            if (!parent.isFavorite){
+                holder.favoriteButton.setImageResource(R.drawable.favorite_on)
+                TopicsDataFactory.addToFavorites(parent)
+                parent.isFavorite = true
+            } else {
+                holder.favoriteButton.setImageResource(R.drawable.favorite)
+                TopicsDataFactory.removeFromFavorites(parent)
+                parent.isFavorite = false
+            }
+        }
     }
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
@@ -73,6 +89,7 @@ class PhrasesParentAdapter(private val parents: List<PhrasesParentModel>) :
         var russianView : TextView = itemView.findViewById(R.id.phrases_russian)
         var transcView : TextView = itemView.findViewById(R.id.phrases_transcription)
         var listenButton : ImageButton = itemView.findViewById(R.id.ib_listen)
+        var favoriteButton : ImageButton = itemView.findViewById(R.id.ib_favourite)
 
         var linearLayout: LinearLayout = itemView.findViewById(R.id.phrases_linear_layout)
         var expandableLayout : RelativeLayout = itemView.findViewById(R.id.phrases_expandable_layout)

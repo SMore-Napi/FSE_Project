@@ -27,7 +27,7 @@ object PhrasesParentDataFactory{
 
     private val parents = mutableListOf(PARENT_1, PARENT_2, PARENT_3, PARENT_4, PARENT_5, PARENT_6, PARENT_7, PARENT_8)
 
-    fun getParents(m : Int) : List<PhrasesParentModel>{
+    fun getParents() : List<PhrasesParentModel>{
         return parents
     }
 }
