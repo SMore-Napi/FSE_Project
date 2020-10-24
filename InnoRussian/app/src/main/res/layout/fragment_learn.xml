@@ -4,13 +4,21 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
     <Button
-        android:id="@+id/quiz_button"
+        android:id="@+id/start_study_quiz_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:text="Start A Daily Quiz" />
+        android:layout_gravity="center_horizontal"
+        android:text="Study new words" />
+
+    <Button
+        android:id="@+id/start_infinite_practice_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="Infinite Practice" />
 </LinearLayout>
 

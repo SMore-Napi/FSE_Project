@@ -23,13 +23,14 @@
             android:name=".SettingsActivity"
             android:parentActivityName=".MainActivity" />
         <activity
-            android:name="com.example.innorussian.phrases.PhrasesActivity"
+            android:name=".phrases.PhrasesActivity"
             android:parentActivityName=".MainActivity" />
         <activity android:name=".PhraseActivity" />
-        <activity android:name=".DailyQuizResultActivity" />
         <activity
-            android:name=".DailyQuizActivity"
+            android:name=".quiz.StudyQuizActivity"
             android:parentActivityName=".MainActivity" />
+        <activity android:name=".DailyQuizResultActivity" />
+        <activity android:name=".quiz.InfinitePracticeActivity" />
 
     </application>
 

@@ -4,7 +4,6 @@ import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
 import android.os.Handler
-import android.util.Log
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.TextView
@@ -107,7 +106,7 @@ class DailyQuizActivity : AppCompatActivity() {
     private fun setStage(stage: Int) {
         when (stage) {
             1 -> {
-                word.isVisible = true
+                spelling.isVisible = true
                 translation.isVisible = true
                 transcription.isVisible = true
                 options.isVisible = false
@@ -121,7 +120,7 @@ class DailyQuizActivity : AppCompatActivity() {
             }
 
             2 -> {
-                word.isVisible = true
+                spelling.isVisible = true
                 translation.isVisible = false
                 transcription.isVisible = true
                 options.isVisible = true
@@ -130,7 +129,7 @@ class DailyQuizActivity : AppCompatActivity() {
             }
 
             3 -> {
-                word.isVisible = true
+                spelling.isVisible = true
                 translation.isVisible = true
                 transcription.isVisible = false
                 options.isVisible = false
@@ -139,7 +138,6 @@ class DailyQuizActivity : AppCompatActivity() {
             }
         }
     }
-
 
     private fun updateStage(stage: Int) {
         when (stage) {
@@ -158,13 +156,13 @@ class DailyQuizActivity : AppCompatActivity() {
     }
 
     private fun updateStage1() {
-        word.text = wordsSet[wordIndex].word
+        spelling.text = wordsSet[wordIndex].word
         translation.text = wordsSet[wordIndex].translation
         transcription.text = wordsSet[wordIndex].transcription
     }
 
     private fun updateStage2() {
-        word.text = wordsSet[wordIndex].word
+        spelling.text = wordsSet[wordIndex].word
         transcription.text = wordsSet[wordIndex].transcription
 
         val possibleTranslations: ArrayList<String> =
@@ -211,7 +209,7 @@ class DailyQuizActivity : AppCompatActivity() {
     }
 
     private fun updateStage3() {
-        word.text = ""
+        spelling.text = ""
         translation.text = wordsSet[wordIndex].translation
 
         val letters: ArrayList<Char> = ArrayList(wordsSet[wordIndex].word.length)
@@ -237,7 +235,7 @@ class DailyQuizActivity : AppCompatActivity() {
             AdapterView.OnItemClickListener { parent, view, position, id ->
 
                 if ((view as TextView).text[0] == string[index]) {
-                    word.text = word.text.toString().plus(string[index].toString())
+                    spelling.text = spelling.text.toString().plus(string[index].toString())
                     letters.remove(string[index])
                     index++
                     adapter.notifyDataSetChanged()

@@ -9,7 +9,7 @@ class PhraseActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_phrase)
 
-        word.text = this.intent.getStringExtra("word")
+        spelling.text = this.intent.getStringExtra("word")
         transcription.text = this.intent.getStringExtra("transcription")
         translation.text = this.intent.getStringExtra("translation")
 
