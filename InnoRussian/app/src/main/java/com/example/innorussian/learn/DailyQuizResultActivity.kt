@@ -1,8 +1,9 @@
-package com.example.innorussian
+package com.example.innorussian.learn
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.innorussian.R
 import kotlinx.android.synthetic.main.activity_daily_quiz_result.*
 
 class DailyQuizResultActivity : AppCompatActivity() {

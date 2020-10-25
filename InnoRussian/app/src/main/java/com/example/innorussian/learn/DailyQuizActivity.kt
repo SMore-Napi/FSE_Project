@@ -1,4 +1,4 @@
-package com.example.innorussian
+package com.example.innorussian.learn
 
 import android.content.Intent
 import android.graphics.Color
@@ -9,6 +9,7 @@ import android.widget.ArrayAdapter
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.isVisible
+import com.example.innorussian.R
 import kotlinx.android.synthetic.main.activity_daily_quiz.*
 
 
@@ -50,10 +51,30 @@ class DailyQuizActivity : AppCompatActivity() {
         val possibleTranslations4: ArrayList<String> =
             arrayListOf("Finals", "Group", "Dormitory")
 
-        val w1 = Word("аудитория", "Audience", "auditoriya", possibleTranslations1)
-        val w2 = Word("столовая", "Canteen", "stolovaya", possibleTranslations2)
-        val w3 = Word("занятие", "Class", "zanyatiye", possibleTranslations3)
-        val w4 = Word("лекция", "Lecture", "lektsiya", possibleTranslations4)
+        val w1 = Word(
+            "аудитория",
+            "Audience",
+            "auditoriya",
+            possibleTranslations1
+        )
+        val w2 = Word(
+            "столовая",
+            "Canteen",
+            "stolovaya",
+            possibleTranslations2
+        )
+        val w3 = Word(
+            "занятие",
+            "Class",
+            "zanyatiye",
+            possibleTranslations3
+        )
+        val w4 = Word(
+            "лекция",
+            "Lecture",
+            "lektsiya",
+            possibleTranslations4
+        )
 
         return arrayListOf(w1, w2, w3, w4)
     }
