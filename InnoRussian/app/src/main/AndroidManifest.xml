@@ -9,6 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".AccountSettingsActivity"></activity>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -23,14 +24,13 @@
             android:name=".SettingsActivity"
             android:parentActivityName=".MainActivity" />
         <activity
-            android:name="com.example.innorussian.phrases.PhrasesActivity"
+            android:name=".phrases.PhrasesActivity"
             android:parentActivityName=".MainActivity" />
         <activity android:name=".PhraseActivity" />
         <activity android:name=".DailyQuizResultActivity" />
         <activity
             android:name=".DailyQuizActivity"
             android:parentActivityName=".MainActivity" />
-
     </application>
 
 </manifest>
