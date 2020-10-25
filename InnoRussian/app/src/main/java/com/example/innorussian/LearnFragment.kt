@@ -4,15 +4,24 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import com.example.innorussian.learn.DailyQuizResultActivity
+import com.example.innorussian.learn.LearnParentAdapter
+import com.example.innorussian.learn.LearnParentDataFactory
+import com.example.innorussian.phrasebook.ParentDataFactory
+import com.example.innorussian.phrasebook.PhrasebookParentAdapter
 import com.example.innorussian.quiz.Constants
 import com.example.innorussian.quiz.Dictionary
 import com.example.innorussian.quiz.InfinitePracticeActivity
 import com.example.innorussian.quiz.StudyQuizActivity
 import kotlinx.android.synthetic.main.fragment_learn.*
+import kotlinx.android.synthetic.main.phrasebook_main.*
 
 class LearnFragment : Fragment(R.layout.fragment_learn) {
     private val constants = Constants()
     private val dictionary = Dictionary()
+    lateinit var recyclerView: RecyclerView
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -24,6 +33,24 @@ class LearnFragment : Fragment(R.layout.fragment_learn) {
         start_infinite_practice_button.setOnClickListener {
             startInfinitePractice()
         }
+
+        initRecycler()
+    }
+
+    private fun initRecycler() {
+        recyclerView = learn_rv!!
+
+        recyclerView.apply {
+            layoutManager = LinearLayoutManager(
+                context,
+                RecyclerView.VERTICAL, false
+            )
+            adapter = LearnParentAdapter(
+                LearnParentDataFactory.getParents(40)
+            )
+            setHasFixedSize(true)
+        }
+
     }
 
     private fun startStudyQuiz() {

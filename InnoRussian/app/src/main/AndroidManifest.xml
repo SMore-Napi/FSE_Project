@@ -20,6 +20,9 @@
             android:name=".FavouritesActivity"
             android:parentActivityName=".MainActivity" />
         <activity
+            android:name=".learn_topics.LearnTopicsActivity"
+            android:parentActivityName=".MainActivity" />
+        <activity
             android:name=".SettingsActivity"
             android:parentActivityName=".MainActivity" />
         <activity
@@ -29,7 +32,7 @@
         <activity
             android:name=".quiz.StudyQuizActivity"
             android:parentActivityName=".MainActivity" />
-        <activity android:name=".DailyQuizResultActivity" />
+        <activity android:name=".learn.DailyQuizResultActivity" />
         <activity android:name=".quiz.InfinitePracticeActivity" />
 
     </application>
