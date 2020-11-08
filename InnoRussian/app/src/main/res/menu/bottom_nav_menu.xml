@@ -13,7 +13,7 @@
         android:icon="@drawable/ic_scanner"
         android:title="Scan" />
     <item
-        android:id="@+id/miAccount"
-        android:icon="@drawable/ic_account"
-        android:title="Account" />
+        android:id="@+id/miSettings"
+        android:icon="@drawable/ic_settings"
+        android:title="Settings" />
 </menu>
