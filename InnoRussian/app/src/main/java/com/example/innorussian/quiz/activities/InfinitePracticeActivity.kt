@@ -1,9 +1,15 @@
-package com.example.innorussian.quiz
+package com.example.innorussian.quiz.activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import com.example.innorussian.R
+import com.example.innorussian.quiz.logic.Brainstorm
+import com.example.innorussian.quiz.logic.Constants
+import com.example.innorussian.quiz.logic.Dictionary
+import com.example.innorussian.quiz.activities.fragments.ChoosePhraseFragment
+import com.example.innorussian.quiz.activities.fragments.FormPhraseFragment
+import com.example.innorussian.quiz.activities.fragments.RememberPhraseFragment
 import kotlinx.android.synthetic.main.activity_infinite_practice.*
 
 class InfinitePracticeActivity : AppCompatActivity(), ActivityFragmentsCommunicator {
@@ -37,8 +43,7 @@ class InfinitePracticeActivity : AppCompatActivity(), ActivityFragmentsCommunica
             }
         }
 
-        dictionary.updateStudiedWords(studiedWordsList)
-        dictionary.updateRepeatWords(repeatWordsList)
+        dictionary.updateWords(studiedWordsList, repeatWordsList)
 
         brainstorm = Brainstorm(dictionary.getWordsForInfinitePractice(4, 3))
         updateStage(brainstorm)

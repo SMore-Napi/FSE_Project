@@ -1,4 +1,4 @@
-package com.example.innorussian.quiz
+package com.example.innorussian.quiz.logic
 
 import android.graphics.Color
 

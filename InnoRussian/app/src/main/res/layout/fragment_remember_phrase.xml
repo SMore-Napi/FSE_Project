@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".quiz.RememberPhraseFragment">
+    tools:context=".quiz.activities.fragments.RememberPhraseFragment">
 
     <TextView
         android:id="@+id/spelling"

@@ -32,10 +32,10 @@
             android:parentActivityName=".MainActivity" />
         <activity android:name=".PhraseActivity" />
         <activity
-            android:name=".quiz.StudyQuizActivity"
+            android:name=".quiz.activities.StudyQuizActivity"
             android:parentActivityName=".MainActivity" />
-        <activity android:name=".learn.DailyQuizResultActivity" />
-        <activity android:name=".quiz.InfinitePracticeActivity" />
+        <activity android:name=".quiz.activities.DailyQuizResultActivity" />
+        <activity android:name=".quiz.activities.InfinitePracticeActivity" />
 
     </application>
 

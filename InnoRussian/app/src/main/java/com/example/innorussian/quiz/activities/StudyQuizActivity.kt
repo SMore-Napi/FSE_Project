@@ -1,10 +1,16 @@
-package com.example.innorussian.quiz
+package com.example.innorussian.quiz.activities
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import com.example.innorussian.R
+import com.example.innorussian.quiz.logic.Brainstorm
+import com.example.innorussian.quiz.logic.Constants
+import com.example.innorussian.quiz.logic.Dictionary
+import com.example.innorussian.quiz.activities.fragments.ChoosePhraseFragment
+import com.example.innorussian.quiz.activities.fragments.FormPhraseFragment
+import com.example.innorussian.quiz.activities.fragments.RememberPhraseFragment
 import kotlinx.android.synthetic.main.activity_study_quiz.*
 
 class StudyQuizActivity : AppCompatActivity(), ActivityFragmentsCommunicator {

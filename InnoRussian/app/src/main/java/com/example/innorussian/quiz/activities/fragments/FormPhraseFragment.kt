@@ -1,4 +1,4 @@
-package com.example.innorussian.quiz
+package com.example.innorussian.quiz.activities.fragments
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -10,6 +10,8 @@ import android.os.Handler
 import android.widget.AdapterView
 import android.widget.TextView
 import com.example.innorussian.R
+import com.example.innorussian.quiz.activities.ActivityFragmentsCommunicator
+import com.example.innorussian.quiz.logic.Constants
 import kotlinx.android.synthetic.main.fragment_form_phrase.view.*
 
 class FormPhraseFragment : Fragment(R.layout.fragment_form_phrase) {

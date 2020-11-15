@@ -1,4 +1,4 @@
-package com.example.innorussian.quiz
+package com.example.innorussian.quiz.activities.fragments
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -6,6 +6,8 @@ import androidx.fragment.app.Fragment
 import android.view.View
 import android.view.ViewGroup
 import com.example.innorussian.R
+import com.example.innorussian.quiz.activities.ActivityFragmentsCommunicator
+import com.example.innorussian.quiz.logic.Constants
 import kotlinx.android.synthetic.main.fragment_remember_phrase.view.*
 
 class RememberPhraseFragment : Fragment(R.layout.fragment_remember_phrase) {

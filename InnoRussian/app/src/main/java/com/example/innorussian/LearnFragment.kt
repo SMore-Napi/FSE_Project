@@ -6,17 +6,14 @@ import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.innorussian.learn.DailyQuizResultActivity
+import com.example.innorussian.quiz.activities.DailyQuizResultActivity
 import com.example.innorussian.learn.LearnParentAdapter
 import com.example.innorussian.learn.LearnParentDataFactory
-import com.example.innorussian.phrasebook.ParentDataFactory
-import com.example.innorussian.phrasebook.PhrasebookParentAdapter
-import com.example.innorussian.quiz.Constants
-import com.example.innorussian.quiz.Dictionary
-import com.example.innorussian.quiz.InfinitePracticeActivity
-import com.example.innorussian.quiz.StudyQuizActivity
+import com.example.innorussian.quiz.logic.Constants
+import com.example.innorussian.quiz.logic.Dictionary
+import com.example.innorussian.quiz.activities.InfinitePracticeActivity
+import com.example.innorussian.quiz.activities.StudyQuizActivity
 import kotlinx.android.synthetic.main.fragment_learn.*
-import kotlinx.android.synthetic.main.phrasebook_main.*
 
 class LearnFragment : Fragment(R.layout.fragment_learn) {
     private val constants = Constants()
@@ -82,8 +79,7 @@ class LearnFragment : Fragment(R.layout.fragment_learn) {
                 }
                 val xp = studiedWordsList.size * 4
 
-                dictionary.updateStudiedWords(studiedWordsList)
-                dictionary.updateRepeatWords(repeatWordsList)
+                dictionary.updateWords(studiedWordsList, repeatWordsList)
 
                 val quizResultIntent = Intent(activity, DailyQuizResultActivity::class.java)
                 quizResultIntent.putExtra("studiedWordsList", studiedWordsList)
