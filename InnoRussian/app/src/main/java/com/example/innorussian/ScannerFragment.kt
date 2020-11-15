@@ -15,15 +15,23 @@ import com.budiyev.android.codescanner.DecodeCallback
 import com.budiyev.android.codescanner.ErrorCallback
 import com.budiyev.android.codescanner.ScanMode
 import com.example.innorussian.phrases.PhrasesActivity
+import com.example.innorussian.phrases.TopicsDataFactory
 import kotlinx.android.synthetic.main.fragment_scanner.*
 
 private const val CAMERA_REQUEST_CODE = 101
 
 class ScannerFragment : Fragment(R.layout.fragment_scanner) {
     private lateinit var codeScanner: CodeScanner
+    private lateinit var topicName: String
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        btn_open_topic.setOnClickListener {
+            val intent = Intent(activity, PhrasesActivity()::class.java)
+            intent.putExtra("topic", topicName)
+            startActivity(intent)
+        }
 
         setupPermissions()
         codeScanner()
@@ -44,9 +52,13 @@ class ScannerFragment : Fragment(R.layout.fragment_scanner) {
 
             decodeCallback = DecodeCallback {
                 activity?.runOnUiThread {
-                    val intent = Intent(activity, PhrasesActivity()::class.java)
-                    intent.putExtra("topic", it.text)
-                    startActivity(intent)
+                    if (TopicsDataFactory.containsTopic(it.text)) {
+                        topicName = it.text
+                        tv_textView.visibility = View.GONE
+                        btn_open_topic.visibility = View.VISIBLE
+                    } else {
+                        tv_textView.text = "Such topic doesn't exist"
+                    }
                 }
             }
 

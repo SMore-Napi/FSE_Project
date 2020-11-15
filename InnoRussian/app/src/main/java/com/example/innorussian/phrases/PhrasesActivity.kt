@@ -2,60 +2,60 @@ package com.example.innorussian.phrases
 
 import android.content.Intent
 import android.os.Bundle
-import android.speech.tts.TextToSpeech
-import android.util.Log
-import android.widget.Button
-import android.widget.ImageButton
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.innorussian.QRCodeImageActivity
 import com.example.innorussian.R
-import kotlinx.android.synthetic.main.activity_daily_quiz_result.*
-import kotlinx.android.synthetic.main.activity_main.*
+import com.example.innorussian.quiz.activities.DailyQuizResultActivity
 import kotlinx.android.synthetic.main.phrases_main.*
-import kotlinx.android.synthetic.main.phrases_parent.*
-import kotlinx.android.synthetic.main.phrases_parent.view.*
-import java.util.*
 
-class PhrasesActivity() : AppCompatActivity(){
-    lateinit var recyclerView : RecyclerView
+class PhrasesActivity() : AppCompatActivity() {
+    lateinit var recyclerView: RecyclerView
+    private var topicName: String? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.phrases_main)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
-        val topicName: String? = intent.getStringExtra("topic")
+        topicName = intent.getStringExtra("topic")
 
-        var list : List<PhrasesParentModel> = TopicsDataFactory.education.phrases
+        var list: List<PhrasesParentModel> = TopicsDataFactory.education.phrases
 
-        for (topic in TopicsDataFactory.getTopics()){
-            if (topic.nameOfTopic == topicName){
+        for (topic in TopicsDataFactory.getTopics()) {
+            if (topic.nameOfTopic == topicName) {
                 list = topic.phrases
             }
+        }
+
+        btn_qr_code.setOnClickListener {
+            val qrCodeActivity = Intent(this, QRCodeImageActivity::class.java)
+            qrCodeActivity.putExtra("topic", topicName)
+            startActivity(qrCodeActivity)
         }
 
         initRecycler(list)
     }
 
-    override fun onPause(){
+    override fun onPause() {
         super.onPause()
-        for (phrase in PhrasesParentDataFactory.getParents()){
+        for (phrase in PhrasesParentDataFactory.getParents()) {
             phrase.expandable = false
         }
     }
 
-    private fun initRecycler(list : List<PhrasesParentModel>){
+    private fun initRecycler(list: List<PhrasesParentModel>) {
         recyclerView = phrases_rv!!
         recyclerView.apply {
-            layoutManager = LinearLayoutManager(this@PhrasesActivity,
-                RecyclerView.VERTICAL, false)
+            layoutManager = LinearLayoutManager(
+                this@PhrasesActivity,
+                RecyclerView.VERTICAL, false
+            )
             adapter = PhrasesParentAdapter(list)
             setHasFixedSize(true)
         }
 
     }
-
 
 
     /*override fun onInit(status: Int) {
