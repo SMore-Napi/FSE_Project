@@ -6,13 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="8dp"
-    tools:context=".phrases.PhrasesActivity">
-
-    <Button
-        android:id="@+id/btn_qr_code"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="open" />
+    tools:context=".home_fragment.phrasebook.topic.phrases.PhrasesActivity">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/phrases_rv"

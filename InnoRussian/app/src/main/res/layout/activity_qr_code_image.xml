@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:layout_margin="20dp"
     android:gravity="top"
-    tools:context=".QRCodeImageActivity">
+    tools:context=".home_fragment.phrasebook.topic.QRCodeImageActivity">
 
     <ImageView
         android:id="@+id/imageView"

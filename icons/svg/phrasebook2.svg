@@ -1,0 +1,33 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 72 72">
+  <defs>
+    <style>
+      .cls-1, .cls-2, .cls-3 {
+        fill: none;
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-miterlimit: 10;
+      }
+
+      .cls-1 {
+        stroke-width: 3.04px;
+      }
+
+      .cls-2 {
+        stroke-width: 2.82px;
+      }
+
+      .cls-3 {
+        stroke-width: 2.86px;
+      }
+    </style>
+  </defs>
+  <title>icons</title>
+  <g>
+    <path class="cls-1" d="M2.3,19.79V54S17.84,43.22,34,54V19.79C17.84,9,2.3,19.79,2.3,19.79Z"/>
+    <path class="cls-1" d="M37,19.79V54c16.12-10.78,31.67,0,31.67,0V19.79S53.12,9,37,19.79Z"/>
+    <path class="cls-2" d="M9.27,24.54s9-6.36,18.25,0"/>
+    <path class="cls-3" d="M8.71,34.22s9.29-6.36,18.81,0"/>
+    <path class="cls-3" d="M8.71,43.9s9.29-6.36,18.81,0"/>
+    <polygon points="45.75 28.89 48.79 34.64 48.79 15.83 42.74 15.83 42.74 34.6 45.75 28.89"/>
+  </g>
+</svg>

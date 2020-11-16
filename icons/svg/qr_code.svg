@@ -1,0 +1,22 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 72 72">
+  <title>icons</title>
+  <g>
+    <g>
+      <path d="M0,0V30H30V0ZM24,24H6V6H24Z"/>
+      <rect x="10" y="10" width="10" height="10"/>
+    </g>
+    <g>
+      <path d="M42,0V30H72V0ZM66,24H48V6H66Z"/>
+      <rect x="52" y="10" width="10" height="10"/>
+    </g>
+    <g>
+      <path d="M0,42V72H30V42ZM24,66H6V48H24Z"/>
+      <rect x="10" y="52" width="10" height="10"/>
+    </g>
+    <rect x="62" y="42" width="10" height="10"/>
+    <rect x="52" y="52" width="10" height="10"/>
+    <rect x="42" y="42" width="10" height="10"/>
+    <rect x="62" y="62" width="10" height="10"/>
+    <rect x="42" y="62" width="10" height="10"/>
+  </g>
+</svg>

@@ -3,6 +3,10 @@ package com.example.innorussian
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.fragment.app.Fragment
+import com.example.innorussian.home_fragment.HomeFragment
+import com.example.innorussian.learn_fragment.LearnFragment
+import com.example.innorussian.scanner_fragment.ScannerFragment
+import com.example.innorussian.settings_fragment.SettingsFragment
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {

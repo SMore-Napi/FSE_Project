@@ -16,11 +16,15 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".QRCodeImageActivity"
+            android:name=".home_fragment.phrasebook.topic.TopicActivity"
             android:parentActivityName=".MainActivity" />
-        <activity android:name=".account.LogInActivity" />
-        <activity android:name=".account.RegisterActivity" />
-        <activity android:name=".account.MyAccountActivity" />
+        <activity android:name="com.example.innorussian.home_fragment.phrasebook.topic.info.InfoActivity" />
+        <activity
+            android:name=".home_fragment.phrasebook.topic.QRCodeImageActivity"
+            android:parentActivityName=".MainActivity" />
+        <activity android:name=".settings_fragment.account.LogInActivity" />
+        <activity android:name=".settings_fragment.account.RegisterActivity" />
+        <activity android:name=".settings_fragment.account.MyAccountActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -29,20 +33,16 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".FavouritesActivity"
+            android:name=".learn_fragment.learn_topics.LearnTopicsActivity"
             android:parentActivityName=".MainActivity" />
         <activity
-            android:name=".learn_topics.LearnTopicsActivity"
+            android:name="com.example.innorussian.home_fragment.phrasebook.topic.phrases.PhrasesActivity"
             android:parentActivityName=".MainActivity" />
         <activity
-            android:name=".phrases.PhrasesActivity"
+            android:name=".learn_fragment.quiz.activities.StudyQuizActivity"
             android:parentActivityName=".MainActivity" />
-        <activity android:name=".PhraseActivity" />
-        <activity
-            android:name=".quiz.activities.StudyQuizActivity"
-            android:parentActivityName=".MainActivity" />
-        <activity android:name=".quiz.activities.DailyQuizResultActivity" />
-        <activity android:name=".quiz.activities.InfinitePracticeActivity" />
+        <activity android:name=".learn_fragment.quiz.activities.StudyQuizResultActivity" />
+        <activity android:name=".learn_fragment.quiz.activities.InfinitePracticeActivity" />
     </application>
 
 </manifest>
