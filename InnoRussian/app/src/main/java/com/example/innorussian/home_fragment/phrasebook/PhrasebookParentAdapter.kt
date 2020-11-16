@@ -3,10 +3,16 @@ package com.example.innorussian.home_fragment.phrasebook
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.*
+import android.view.animation.Animation
+import android.view.animation.AnimationUtils
+import android.widget.ImageView
+import android.widget.LinearLayout
+import android.widget.RelativeLayout
+import android.widget.TextView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.innorussian.R
+
 
 class PhrasebookParentAdapter(private val parents: List<ParentModel>) :
     RecyclerView.Adapter<PhrasebookParentAdapter.ViewHolder>(){
@@ -46,10 +52,25 @@ class PhrasebookParentAdapter(private val parents: List<ParentModel>) :
 
         holder.linearLayout.setOnClickListener {
             val parent = parents[position]
+            if (!parent.expandable){
+                val mEnlargeAnimation : Animation = AnimationUtils.loadAnimation(holder.imageView.context, R.anim.enlarge)
+                holder.imageView.startAnimation(mEnlargeAnimation)
+            } else {
+                val mShrinkAnimation : Animation = AnimationUtils.loadAnimation(holder.imageView.context, R.anim.shrink)
+                holder.imageView.startAnimation(mShrinkAnimation)
+            }
             parent.expandable = !parent.isExpandable()
-            notifyItemChanged(position)
+            notifyItemChanged(position){
+                if (!parent.expandable) {
+                    val mEnlargeAnimation: Animation =
+                        AnimationUtils.loadAnimation(holder.imageView.context, R.anim.enlarge)
+                    holder.imageView.startAnimation(mEnlargeAnimation)
+                } else {
+                    val mShrinkAnimation : Animation = AnimationUtils.loadAnimation(holder.imageView.context, R.anim.shrink)
+                    holder.imageView.startAnimation(mShrinkAnimation)
+                }
+            }
         }
-
 
     }
 

@@ -4,23 +4,29 @@ import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
+import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.example.innorussian.R
+import com.example.innorussian.home_fragment.phrasebook.topic.phrases.PhrasesFragment
 import com.example.innorussian.settings_fragment.account.LogInActivity
-import com.example.innorussian.home_fragment.phrasebook.topic.phrases.PhrasesActivity
 import kotlinx.android.synthetic.main.fragment_account.*
 
+
 class SettingsFragment : Fragment(R.layout.fragment_account) {
+    lateinit var phrasesFragment: PhrasesFragment
 
     @SuppressLint("SetTextI18n")
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
         button_favourites.setOnClickListener {
-            val favouritesIntent = Intent(activity, PhrasesActivity()::class.java)
-            favouritesIntent.putExtra("topic", "Favorites")
-            startActivity(favouritesIntent)
+            val nextFrag = PhrasesFragment()
+            nextFrag.setTopic("Favorites")
+            activity!!.supportFragmentManager.beginTransaction()
+                .replace((getView()!!.parent as ViewGroup).id, nextFrag, "findThisFragment")
+                .addToBackStack(null)
+                .commit()
         }
 
         btn_account.setOnClickListener{

@@ -9,7 +9,6 @@ import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.RecyclerView
 import com.example.innorussian.R
 import com.example.innorussian.home_fragment.phrasebook.topic.TopicActivity
-import com.example.innorussian.home_fragment.phrasebook.topic.phrases.PhrasesActivity
 import com.example.innorussian.home_fragment.phrasebook.topic.phrases.TopicsDataFactory
 
 class PhrasebookChildAdapter(private val children: List<PhrasebookChildModel>) :

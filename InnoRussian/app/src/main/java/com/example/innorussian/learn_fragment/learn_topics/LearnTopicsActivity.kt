@@ -5,7 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.RecyclerView
 import com.example.innorussian.R
 
-class LearnTopicsActivity() : AppCompatActivity(){
+class LearnTopicsActivity : AppCompatActivity(){
     lateinit var recyclerView : RecyclerView
 
     override fun onCreate(savedInstanceState: Bundle?) {

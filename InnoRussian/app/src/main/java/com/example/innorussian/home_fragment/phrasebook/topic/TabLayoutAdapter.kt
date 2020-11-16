@@ -30,6 +30,7 @@ internal class TabLayoutAdapter(
                 val bundle = Bundle()
                 bundle.putString("topic", topicName)
                 val phraseFragment = PhrasesFragment()
+                phraseFragment.setTopic(topicName)
                 phraseFragment.arguments = bundle
                 phraseFragment
             }

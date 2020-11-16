@@ -16,7 +16,6 @@ import com.budiyev.android.codescanner.ErrorCallback
 import com.budiyev.android.codescanner.ScanMode
 import com.example.innorussian.R
 import com.example.innorussian.home_fragment.phrasebook.topic.TopicActivity
-import com.example.innorussian.home_fragment.phrasebook.topic.phrases.PhrasesActivity
 import com.example.innorussian.home_fragment.phrasebook.topic.phrases.TopicsDataFactory
 import kotlinx.android.synthetic.main.fragment_scanner.*
 

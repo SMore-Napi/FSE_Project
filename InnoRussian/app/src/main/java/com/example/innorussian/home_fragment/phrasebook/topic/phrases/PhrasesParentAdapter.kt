@@ -5,6 +5,8 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.animation.Animation
+import android.view.animation.AnimationUtils
 import android.widget.ImageButton
 import android.widget.LinearLayout
 import android.widget.RelativeLayout
@@ -64,8 +66,31 @@ class PhrasesParentAdapter(private val parents: List<PhrasesParentModel>) :
 
         holder.linearLayout.setOnClickListener {
             val parent = parents[position]
+            if (!parent.expandable){
+                val mEnlargeAnimation0 : Animation = AnimationUtils.loadAnimation(holder.englishView.context, R.anim.enlarge_text)
+                val mEnlargeAnimation1 : Animation = AnimationUtils.loadAnimation(holder.russianView.context, R.anim.enlarge_text)
+                holder.englishView.startAnimation(mEnlargeAnimation0)
+                holder.russianView.startAnimation(mEnlargeAnimation1)
+            } else {
+                val mEnlargeAnimation0 : Animation = AnimationUtils.loadAnimation(holder.englishView.context, R.anim.shrink_text)
+                val mEnlargeAnimation1 : Animation = AnimationUtils.loadAnimation(holder.russianView.context, R.anim.shrink_text)
+                holder.englishView.startAnimation(mEnlargeAnimation0)
+                holder.russianView.startAnimation(mEnlargeAnimation1)
+            }
             parent.expandable = !parent.isExpandable()
-            notifyItemChanged(position)
+            notifyItemChanged(position){
+                if (!parent.expandable){
+                    val mEnlargeAnimation0 : Animation = AnimationUtils.loadAnimation(holder.englishView.context, R.anim.enlarge_text)
+                    val mEnlargeAnimation1 : Animation = AnimationUtils.loadAnimation(holder.russianView.context, R.anim.enlarge_text)
+                    holder.englishView.startAnimation(mEnlargeAnimation0)
+                    holder.russianView.startAnimation(mEnlargeAnimation1)
+                } else {
+                    val mEnlargeAnimation0 : Animation = AnimationUtils.loadAnimation(holder.englishView.context, R.anim.shrink_text)
+                    val mEnlargeAnimation1 : Animation = AnimationUtils.loadAnimation(holder.russianView.context, R.anim.shrink_text)
+                    holder.englishView.startAnimation(mEnlargeAnimation0)
+                    holder.russianView.startAnimation(mEnlargeAnimation1)
+                }
+            }
         }
 
         if (!parent.isFavorite) {

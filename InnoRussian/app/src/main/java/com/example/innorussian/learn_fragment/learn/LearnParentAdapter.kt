@@ -3,6 +3,8 @@ package com.example.innorussian.learn_fragment.learn
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.animation.Animation
+import android.view.animation.AnimationUtils
 import android.widget.*
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -46,8 +48,23 @@ class LearnParentAdapter(private val parents: List<LearnParentModel>) :
 
         holder.linearLayout.setOnClickListener {
             val parent = parents[position]
+            if (!parent.expandable){
+                val mEnlargeAnimation : Animation = AnimationUtils.loadAnimation(holder.imageView.context, R.anim.enlarge)
+                holder.imageView.startAnimation(mEnlargeAnimation)
+            } else {
+                val mShrinkAnimation : Animation = AnimationUtils.loadAnimation(holder.imageView.context, R.anim.shrink)
+                holder.imageView.startAnimation(mShrinkAnimation)
+            }
             parent.expandable = !parent.isExpandable()
-            notifyItemChanged(position)
+            notifyItemChanged(position){
+                if (!parent.expandable){
+                    val mEnlargeAnimation : Animation = AnimationUtils.loadAnimation(holder.imageView.context, R.anim.enlarge)
+                    holder.imageView.startAnimation(mEnlargeAnimation)
+                } else {
+                    val mShrinkAnimation : Animation = AnimationUtils.loadAnimation(holder.imageView.context, R.anim.shrink)
+                    holder.imageView.startAnimation(mShrinkAnimation)
+                }
+            }
         }
 
 

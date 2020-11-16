@@ -1,32 +1,65 @@
 package com.example.innorussian.home_fragment.phrasebook.topic.phrases
 
-import android.content.Intent
-import com.example.innorussian.R
 import android.os.Bundle
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
-import kotlinx.android.synthetic.main.fragment_phrases.view.*
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import com.example.innorussian.R
+import kotlinx.android.synthetic.main.phrases_main.*
 
-class PhrasesFragment : Fragment() {
-    private var topicName: String? = null
+class PhrasesFragment : Fragment(R.layout.phrases_main) {
+    lateinit var recyclerView: RecyclerView
+    lateinit var topicName: String
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
 
-        val view = inflater.inflate(R.layout.fragment_phrases, container, false)
+        var list: List<PhrasesParentModel> = TopicsDataFactory.education.phrases
 
-        topicName = this.arguments?.getString("topic")
-
-        view.btn_phrases.setOnClickListener {
-            val infoIntent = Intent(activity, PhrasesActivity::class.java)
-            infoIntent.putExtra("topic", topicName)
-            startActivity(infoIntent)
+        for (topic in TopicsDataFactory.getTopics()) {
+            if (topic.nameOfTopic == topicName) {
+                list = topic.phrases
+            }
         }
 
-        return view
+        initRecycler(list)
     }
+
+    override fun onPause() {
+        super.onPause()
+        for (phrase in PhrasesParentDataFactory.getParents()) {
+            phrase.expandable = false
+        }
+    }
+
+    private fun initRecycler(list: List<PhrasesParentModel>) {
+        recyclerView = phrases_rv!!
+        recyclerView.apply {
+            layoutManager = LinearLayoutManager(
+                this.context,
+                RecyclerView.VERTICAL, false
+            )
+            adapter = PhrasesParentAdapter(list)
+            setHasFixedSize(true)
+        }
+
+    }
+
+    fun setTopic(topic: String){
+        this.topicName = topic;
+    }
+    /*override fun onInit(status: Int) {
+        if (status == TextToSpeech.SUCCESS){
+            val result = mTTs!!.isLanguageAvailable(Locale("ru"))
+            Log.d("TTS", "ok");
+        } else {
+            Log.d("TTS", "error");
+        }
+    }
+
+    private fun speakOut(text: String){
+        mTTs!!.speak(text, TextToSpeech.QUEUE_FLUSH, null, "")
+    }*/
 }
