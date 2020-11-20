@@ -44,6 +44,10 @@ object PhrasesParentDataFactory {
         PARENT_8
     )
 
+    fun addParent(parent: PhrasesParentModel) {
+        parents.add(parent)
+    }
+
     fun getParents(): List<PhrasesParentModel> {
         return parents
     }

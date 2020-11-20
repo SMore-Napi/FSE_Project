@@ -49,7 +49,7 @@ class TopicActivity : AppCompatActivity() {
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
-        menuInflater.inflate(R.menu.qr_code_menu, menu)
+        menuInflater.inflate(R.menu.topic_menu, menu)
         return true
     }
 
@@ -58,6 +58,12 @@ class TopicActivity : AppCompatActivity() {
             val qrCodeActivity = Intent(this, QRCodeImageActivity::class.java)
             qrCodeActivity.putExtra("topic", topicName)
             startActivity(qrCodeActivity)
+            true
+        }
+        R.id.add_new -> {
+            val addWordActivity = Intent(this, AddNewWord::class.java)
+            addWordActivity.putExtra("topic", topicName)
+            startActivity(addWordActivity)
             true
         }
         else -> super.onOptionsItemSelected(item)

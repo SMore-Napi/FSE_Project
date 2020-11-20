@@ -23,6 +23,30 @@ object TopicsDataFactory {
         return topics
     }
 
+    fun addParent(
+        nameOfTopic: String,
+        english: String,
+        russian: String,
+        transcription: String,
+        phrases: List<PhrasesChildModel>
+    ) {
+        for (topic in topics) {
+            if (topic.nameOfTopic == nameOfTopic) {
+
+                for (phrase in phrases) {
+                    PhrasesChildDataFactory.addChild(phrase)
+                }
+
+                val parent = PhrasesParentModel(english, russian, transcription, phrases)
+
+                PhrasesParentDataFactory.addParent(parent)
+
+                topic.phrases.add(parent)
+                break
+            }
+        }
+    }
+
     fun addToFavorites(phrase: PhrasesParentModel) {
         favorites.phrases.add(phrase)
     }

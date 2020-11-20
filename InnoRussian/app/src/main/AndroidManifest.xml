@@ -15,10 +15,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".home_fragment.phrasebook.topic.AddNewWord" />
         <activity
             android:name=".home_fragment.phrasebook.topic.TopicActivity"
             android:parentActivityName=".MainActivity" />
-        <activity android:name="com.example.innorussian.home_fragment.phrasebook.topic.info.InfoActivity" />
         <activity
             android:name=".home_fragment.phrasebook.topic.QRCodeImageActivity"
             android:parentActivityName=".MainActivity" />
@@ -36,7 +36,7 @@
             android:name=".learn_fragment.learn_topics.LearnTopicsActivity"
             android:parentActivityName=".MainActivity" />
         <activity
-            android:name="com.example.innorussian.home_fragment.phrasebook.topic.phrases.PhrasesActivity"
+            android:name=".home_fragment.phrasebook.topic.phrases.PhrasesActivity"
             android:parentActivityName=".MainActivity" />
         <activity
             android:name=".learn_fragment.quiz.activities.StudyQuizActivity"

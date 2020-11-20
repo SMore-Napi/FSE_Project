@@ -57,4 +57,8 @@ object PhrasesChildDataFactory {
     fun getChildren(): List<PhrasesChildModel> {
         return children
     }
+
+    fun addChild(child: PhrasesChildModel) {
+        children.add(child)
+    }
 }
