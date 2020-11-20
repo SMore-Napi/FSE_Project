@@ -15,7 +15,7 @@ import com.example.innorussian.home_fragment.phrasebook.topic.phrases.PhrasesChi
 
 object PhrasesParentDataFactory {
     val PARENT_1: PhrasesParentModel =
-        PhrasesParentModel("auditorium", "аудитория", "[auditpriya]", listOf(CHILD_1))
+        PhrasesParentModel("auditorium", "аудитория", "[auditoriya]", listOf(CHILD_1))
     val PARENT_2: PhrasesParentModel =
         PhrasesParentModel("canteen", "столовая", "[stolovaya]", listOf(CHILD_2))
     val PARENT_3: PhrasesParentModel =
@@ -26,7 +26,7 @@ object PhrasesParentDataFactory {
     val PARENT_5: PhrasesParentModel =
         PhrasesParentModel("copybook", "тетрадь", "[tetrad']", listOf(CHILD_6))
     val PARENT_6: PhrasesParentModel =
-        PhrasesParentModel("textbook", "учебгик", "[uchebnik]", listOf(CHILD_7, CHILD_8))
+        PhrasesParentModel("textbook", "учебник", "[uchebnik]", listOf(CHILD_7, CHILD_8))
 
     val PARENT_7: PhrasesParentModel =
         PhrasesParentModel("entrance", "вход", "[vhod]", listOf(CHILD_9, CHILD_10))

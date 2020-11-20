@@ -28,11 +28,11 @@ object PhrasesChildDataFactory {
     )
     val CHILD_7: PhrasesChildModel = PhrasesChildModel(
         "To download a textbook",
-        "Скачать учбеник"
+        "Скачать учебник"
     )
     val CHILD_8: PhrasesChildModel = PhrasesChildModel(
         "To find a textbook in the library",
-        "Найти учбеник в библиотеке"
+        "Найти учебник в библиотеке"
     )
 
     val CHILD_9: PhrasesChildModel = PhrasesChildModel(

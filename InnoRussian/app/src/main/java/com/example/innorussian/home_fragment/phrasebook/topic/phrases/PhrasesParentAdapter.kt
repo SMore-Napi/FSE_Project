@@ -49,7 +49,9 @@ class PhrasesParentAdapter(private val parents: List<PhrasesParentModel>) :
         mTTs = TextToSpeech(holder.itemView.context, this)
 
         holder.listenButton.setOnClickListener {
-            speakOut(parent.transc)
+            var textPronounce: String = parent.transc
+            textPronounce = textPronounce.replace("[", "").replace("]", "")
+            speakOut(textPronounce)
         }
 
         val childLayoutManager =
@@ -66,27 +68,39 @@ class PhrasesParentAdapter(private val parents: List<PhrasesParentModel>) :
 
         holder.linearLayout.setOnClickListener {
             val parent = parents[position]
-            if (!parent.expandable){
-                val mEnlargeAnimation0 : Animation = AnimationUtils.loadAnimation(holder.englishView.context, R.anim.enlarge_text)
-                val mEnlargeAnimation1 : Animation = AnimationUtils.loadAnimation(holder.russianView.context, R.anim.enlarge_text)
+            if (!parent.expandable) {
+                val mEnlargeAnimation0: Animation =
+                    AnimationUtils.loadAnimation(holder.englishView.context, R.anim.enlarge_text)
+                val mEnlargeAnimation1: Animation =
+                    AnimationUtils.loadAnimation(holder.russianView.context, R.anim.enlarge_text)
                 holder.englishView.startAnimation(mEnlargeAnimation0)
                 holder.russianView.startAnimation(mEnlargeAnimation1)
             } else {
-                val mEnlargeAnimation0 : Animation = AnimationUtils.loadAnimation(holder.englishView.context, R.anim.shrink_text)
-                val mEnlargeAnimation1 : Animation = AnimationUtils.loadAnimation(holder.russianView.context, R.anim.shrink_text)
+                val mEnlargeAnimation0: Animation =
+                    AnimationUtils.loadAnimation(holder.englishView.context, R.anim.shrink_text)
+                val mEnlargeAnimation1: Animation =
+                    AnimationUtils.loadAnimation(holder.russianView.context, R.anim.shrink_text)
                 holder.englishView.startAnimation(mEnlargeAnimation0)
                 holder.russianView.startAnimation(mEnlargeAnimation1)
             }
             parent.expandable = !parent.isExpandable()
-            notifyItemChanged(position){
-                if (!parent.expandable){
-                    val mEnlargeAnimation0 : Animation = AnimationUtils.loadAnimation(holder.englishView.context, R.anim.enlarge_text)
-                    val mEnlargeAnimation1 : Animation = AnimationUtils.loadAnimation(holder.russianView.context, R.anim.enlarge_text)
+            notifyItemChanged(position) {
+                if (!parent.expandable) {
+                    val mEnlargeAnimation0: Animation = AnimationUtils.loadAnimation(
+                        holder.englishView.context,
+                        R.anim.enlarge_text
+                    )
+                    val mEnlargeAnimation1: Animation = AnimationUtils.loadAnimation(
+                        holder.russianView.context,
+                        R.anim.enlarge_text
+                    )
                     holder.englishView.startAnimation(mEnlargeAnimation0)
                     holder.russianView.startAnimation(mEnlargeAnimation1)
                 } else {
-                    val mEnlargeAnimation0 : Animation = AnimationUtils.loadAnimation(holder.englishView.context, R.anim.shrink_text)
-                    val mEnlargeAnimation1 : Animation = AnimationUtils.loadAnimation(holder.russianView.context, R.anim.shrink_text)
+                    val mEnlargeAnimation0: Animation =
+                        AnimationUtils.loadAnimation(holder.englishView.context, R.anim.shrink_text)
+                    val mEnlargeAnimation1: Animation =
+                        AnimationUtils.loadAnimation(holder.russianView.context, R.anim.shrink_text)
                     holder.englishView.startAnimation(mEnlargeAnimation0)
                     holder.russianView.startAnimation(mEnlargeAnimation1)
                 }
