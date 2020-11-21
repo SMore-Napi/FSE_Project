@@ -2,6 +2,7 @@ package com.example.innorussian.settings_fragment
 
 import android.annotation.SuppressLint
 import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.view.View
 import android.view.ViewGroup
@@ -33,6 +34,12 @@ class SettingsFragment : Fragment(R.layout.fragment_account) {
             val intent = Intent(activity, LogInActivity::class.java)
             startActivity(intent)
 
+        }
+
+        btn_feedback.setOnClickListener{
+            val openURL = Intent(android.content.Intent.ACTION_VIEW)
+            openURL.data = Uri.parse("https://docs.google.com/forms/d/e/1FAIpQLSfJWcEzammW77Fve-Wf15OaaYY1T3k-i32d0XF-gcCVT9Uvzw/viewform")
+            startActivity(openURL)
         }
 
 
