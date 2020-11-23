@@ -5,6 +5,7 @@ import android.os.Bundle
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
+import com.example.innorussian.SupermarketInfo
 import com.example.innorussian.home_fragment.phrasebook.topic.info.InfoFragment
 import com.example.innorussian.home_fragment.phrasebook.topic.phrases.PhrasesFragment
 
@@ -22,7 +23,12 @@ internal class TabLayoutAdapter(
             0 -> {
                 val bundle = Bundle()
                 bundle.putString("topic", topicName)
-                val infoFragment = InfoFragment()
+                var infoFragment = Fragment()
+                if (topicName == "Supermarket"){
+                    infoFragment = SupermarketInfo()
+                } else {
+                    infoFragment = InfoFragment()
+                }
                 infoFragment.arguments = bundle
                 infoFragment
             }

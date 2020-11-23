@@ -5,7 +5,11 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import android.view.View
 import androidx.viewpager.widget.ViewPager
+import com.example.innorussian.BehetleInfo
+import com.example.innorussian.MagnitInfo
+import com.example.innorussian.PyatorochkaInfo
 import com.example.innorussian.R
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayout.OnTabSelectedListener
@@ -67,5 +71,29 @@ class TopicActivity : AppCompatActivity() {
             true
         }
         else -> super.onOptionsItemSelected(item)
+    }
+
+    fun openPyatorochka(view: View) {
+        val nextFrag = PyatorochkaInfo()
+        this.supportFragmentManager.beginTransaction()
+            .replace(R.id.supermarkets, nextFrag, "findThisFragment")
+            .addToBackStack(null)
+            .commit()
+    }
+
+    fun openMagnit(view: View) {
+        val nextFrag = MagnitInfo()
+        this.supportFragmentManager.beginTransaction()
+            .replace(R.id.supermarkets, nextFrag, "findThisFragment")
+            .addToBackStack(null)
+            .commit()
+    }
+
+    fun openBehetle(view: View) {
+        val nextFrag = BehetleInfo()
+        this.supportFragmentManager.beginTransaction()
+            .replace(R.id.supermarkets, nextFrag, "findThisFragment")
+            .addToBackStack(null)
+            .commit()
     }
 }

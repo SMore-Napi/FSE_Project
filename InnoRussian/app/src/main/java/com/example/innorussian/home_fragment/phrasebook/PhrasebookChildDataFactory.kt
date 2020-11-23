@@ -19,8 +19,8 @@ object PhrasebookChildDataFactory{
     val hallway : PhrasebookChildModel =
         PhrasebookChildModel("Hallway")
 
-    val topic1 : PhrasebookChildModel =
-        PhrasebookChildModel("Topic 1")
+    val supermarket : PhrasebookChildModel =
+        PhrasebookChildModel("Supermarket")
     val topic2 : PhrasebookChildModel =
         PhrasebookChildModel(" Topic 2")
 
@@ -33,7 +33,7 @@ object PhrasebookChildDataFactory{
         bedroom,
         bathroom,
         hallway,
-        topic1,
+        supermarket,
         topic2
     )
 

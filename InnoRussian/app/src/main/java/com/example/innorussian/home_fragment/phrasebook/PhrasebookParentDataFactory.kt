@@ -8,9 +8,9 @@ import com.example.innorussian.home_fragment.phrasebook.PhrasebookChildDataFacto
 import com.example.innorussian.home_fragment.phrasebook.PhrasebookChildDataFactory.room
 import com.example.innorussian.home_fragment.phrasebook.PhrasebookChildDataFactory.schoolSupplies
 import com.example.innorussian.home_fragment.phrasebook.PhrasebookChildDataFactory.theBuildingInside
-import com.example.innorussian.home_fragment.phrasebook.PhrasebookChildDataFactory.topic1
 import com.example.innorussian.home_fragment.phrasebook.PhrasebookChildDataFactory.topic2
 import com.example.innorussian.R
+import com.example.innorussian.home_fragment.phrasebook.PhrasebookChildDataFactory.supermarket
 
 object ParentDataFactory{
     private val parent1 : ParentModel =
@@ -28,14 +28,14 @@ object ParentDataFactory{
     private val parent3 : ParentModel =
         ParentModel(
             R.drawable.pyatyorochka,
-            "Supermarket",
-            listOf(topic1)
+            "Shop",
+            listOf(supermarket)
         )
     private val parent4 : ParentModel =
         ParentModel(
             R.drawable.sports_complex,
             "SportComplex",
-            listOf(topic1, topic2)
+            listOf(topic2)
         )
 
     private val parents = mutableListOf(
