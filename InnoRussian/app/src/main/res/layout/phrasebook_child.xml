@@ -20,7 +20,7 @@
             android:layout_height="40dp"
             android:gravity="center_vertical"
 
-            android:background="@color/colorTransparentBackground"
+            android:background="@color/grey"
             android:text=" Topic 1"
             android:paddingLeft="10dp"
             android:textColor="@color/colorWhite"

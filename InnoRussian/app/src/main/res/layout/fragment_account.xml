@@ -4,13 +4,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:id="@+id/accountFragment"
     tools:context=".MainActivity">
-
 
     <Button
         android:id="@+id/button_favourites"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp"
         android:text="Favourites" />
 
 
@@ -18,25 +20,32 @@
         android:id="@+id/btn_account"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp"
         android:text="Account" />
 
     <Button
         android:id="@+id/btn_reset_progress"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp"
         android:text="Reset progress" />
 
     <Button
         android:id="@+id/btn_study_reminder"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp"
         android:text="enable study reminder" />
 
     <Button
         android:id="@+id/btn_feedback"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp"
         android:text="leave feedback" />
 
 </LinearLayout>

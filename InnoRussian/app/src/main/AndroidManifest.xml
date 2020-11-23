@@ -1,19 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.innorussian">
 
     <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        tools:ignore="ScopedStorage" />
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/ic_home"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@mipmap/ic_home"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".account.LogInActivity"/>
-        <activity android:name=".account.RegisterActivity"/>
-        <activity android:name=".account.MyAccountActivity"/>
+        <activity android:name=".home_fragment.phrasebook.topic.AddNewWord" />
+        <activity
+            android:name=".home_fragment.phrasebook.topic.TopicActivity"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".home_fragment.phrasebook.topic.QRCodeImageActivity"
+            android:parentActivityName=".MainActivity" />
+        <activity android:name=".settings_fragment.account.LogInActivity" />
+        <activity android:name=".settings_fragment.account.RegisterActivity" />
+        <activity android:name=".settings_fragment.account.MyAccountActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -22,21 +33,16 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".FavouritesActivity"
+            android:name=".learn_fragment.learn_topics.LearnTopicsActivity"
             android:parentActivityName=".MainActivity" />
         <activity
-            android:name=".learn_topics.LearnTopicsActivity"
+            android:name=".home_fragment.phrasebook.topic.phrases.PhrasesActivity"
             android:parentActivityName=".MainActivity" />
         <activity
-            android:name=".phrases.PhrasesActivity"
+            android:name=".learn_fragment.quiz.activities.StudyQuizActivity"
             android:parentActivityName=".MainActivity" />
-        <activity android:name=".PhraseActivity" />
-        <activity
-            android:name=".quiz.StudyQuizActivity"
-            android:parentActivityName=".MainActivity" />
-        <activity android:name=".learn.DailyQuizResultActivity" />
-        <activity android:name=".quiz.InfinitePracticeActivity" />
-
+        <activity android:name=".learn_fragment.quiz.activities.StudyQuizResultActivity" />
+        <activity android:name=".learn_fragment.quiz.activities.InfinitePracticeActivity" />
     </application>
 
 </manifest>
