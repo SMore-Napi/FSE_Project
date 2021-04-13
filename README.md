@@ -17,9 +17,11 @@ So, this app is focused on:
 * Learning Russian language.
 
 ## Phrasebook
+<p float="left">
 <img width="150" src="readme_images/home.png"/>
 <img width="150"  src="readme_images/info.png"/>
 <img width="150"  src="readme_images/phrases.png"/>
+</p>
 
 ### Fast access to the phrasebook via scanning QR code
 
@@ -33,7 +35,9 @@ So, this app is focused on:
 </p>
 
 ### Quiz
+<p float="left">
 <img width="130" src="readme_images/quiz1.png"/>
 <img width="130" src="readme_images/quiz2.png"/>
 <img width="130" src="readme_images/quiz3.png"/>
 <img width="130" src="readme_images/quiz4.png"/>
+</p>
