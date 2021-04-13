@@ -1,9 +1,8 @@
 # FSE Project. InnoRussian team.
 
-<p align="center">
 <img width="100" height="100" src="readme_images/logo.png"/>
-</p>
 
+\
 [F20] Fundamentals of Software Engineering project. BS19-02
 
 * The project was developed during the FSE course in Innopolis University.
@@ -18,23 +17,23 @@ So, this app is focused on:
 * Learning Russian language.
 
 ## Phrasebook
-<img style="width: 30%;"  src="readme_images/home.png"/>
-<img style="width: 30%;"  src="readme_images/info.png"/>
-<img style="width: 30%;"  src="readme_images/phrases.png"/>
+<img width="150" src="readme_images/home.png"/>
+<img width="150"  src="readme_images/info.png"/>
+<img width="150"  src="readme_images/phrases.png"/>
 
 ### Fast access to the phrasebook via scanning QR code
 
 <p align="center">
-<img style="width: 30%;"  src="readme_images/qrcode.png"/>
+<img width="150" src="readme_images/qrcode.png"/>
 </p>
 
 ## Learning
 <p align="center">
-<img style="width: 30%;"  src="readme_images/learning.png"/>
+<img width="150" src="readme_images/learning.png"/>
 </p>
 
 ### Quiz
-<img style="width: 20%;"  src="readme_images/quiz1.png"/>
-<img style="width: 20%;"  src="readme_images/quiz2.png"/>
-<img style="width: 20%;"  src="readme_images/quiz3.png"/>
-<img style="width: 20%;"  src="readme_images/quiz4.png"/>
+<img width="130" src="readme_images/quiz1.png"/>
+<img width="130" src="readme_images/quiz2.png"/>
+<img width="130" src="readme_images/quiz3.png"/>
+<img width="130" src="readme_images/quiz4.png"/>
